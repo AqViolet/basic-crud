@@ -1,0 +1,52 @@
+{
+    "members": [
+      {
+        "name": "Karan",
+        "designation": "Board",
+        "domain": "Design",
+        "linkedin": "https://www.linkedin.com/in/karan-dugar-680b81237/"
+      },
+      {
+        "name": "Prateek",
+        "designation": "Board",
+        "domain": "Tech",
+        "linkedin": "https://www.linkedin.com/in/prateeksrivastava-/"
+      },
+      {
+        "name": "Divyanshu",
+        "designation": "Board",
+        "domain": "Editorial",
+        "linkedin": ""
+      },
+      {
+        "name": "Tanvi",
+        "designation": "Board",
+        "domain": "Management",
+        "linkedin": "https://www.linkedin.com/in/tnvj/"
+      },
+      {
+        "name": "Nishant",
+        "designation": "Board",
+        "domain": "Tech",
+        "linkedin": "https://www.linkedin.com/in/nishant-gupta-12913221b/"
+      },
+      {
+        "name": "Heet",
+        "designation": "Junior",
+        "domain": "Tech",
+        "linkedin": "https://www.linkedin.com/in/heet-jatania-4a1294275/"
+      },
+      {
+        "name": "Vaibhav",
+        "designation": "Junior",
+        "domain": "Management",
+        "linkedin": ""
+      },
+      {
+        "name": "Krishna",
+        "designation": "Junior",
+        "domain": "Design",
+        "linkedin": ""
+      }
+    ]
+  }
