@@ -1,5 +1,7 @@
+
 "use client";
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 import OutputContainer from './box';
 import Dropdown from './dropdown';
 
@@ -15,7 +17,6 @@ const domainOptions = [
   { value: 'Design', label: 'Design' },
 ];
 
-
 export default function Searching() {
   const [designation, setDesig] = useState(null);
   const [domain, setDom] = useState(null);
@@ -23,9 +24,17 @@ export default function Searching() {
   const [members, setMem] = useState([]);
 
   useEffect(() => {
-    fetch('/members.json')
-      .then((response) => response.json())
-      .then((data) => setMem(data.members));
+    axios.get('https://jsonplaceholder.typicode.com/users')
+      .then((response) => {
+        const fetchedMembers = response.data.map(user => ({
+          name: user.name,
+          designation: Math.random() > 0.5 ? 'Junior' : 'Board', 
+          domain: ['Tech', 'Editorial', 'Management', 'Design'][Math.floor(Math.random() * 4)], 
+          linkedin: `https://www.linkedin.com/in/${user.name.replace(/\s+/g, '-').toLowerCase()}` || `https://www.linkedin.com/in/${user.username}`
+        }));
+        setMem(fetchedMembers);
+      })
+      .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
   const handleSearch = () => {
@@ -54,8 +63,6 @@ export default function Searching() {
     }
   };
   
-  
-
   return (
     <div style={styles.container}>
       <h1>Member Lookup</h1>
